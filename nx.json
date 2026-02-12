@@ -38,7 +38,11 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/raketacm-e2e/**/*"]
+      "exclude": [
+        "apps/raketacm-e2e/**/*",
+        "apps/customers-service-e2e/**/*",
+        "apps/users-service-e2e/**/*"
+      ]
     }
   ]
 }
