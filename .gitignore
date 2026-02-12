@@ -19,10 +19,7 @@ node_modules
 
 # IDE - VSCode
 .vscode/
-.vscode
 .github/
-.github
-.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -42,5 +39,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
+.nx/
 .nx/cache
 .nx/workspace-data
