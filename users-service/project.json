@@ -1,7 +1,7 @@
 {
   "name": "users-service",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/users-service/src",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "users-service/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -10,7 +10,7 @@
       "options": {
         "command": "webpack-cli build",
         "args": ["--node-env=production"],
-        "cwd": "apps/users-service"
+        "cwd": "users-service"
       },
       "configurations": {
         "development": {
@@ -23,8 +23,8 @@
       "cache": true,
       "executor": "@nx/js:prune-lockfile",
       "outputs": [
-        "{workspaceRoot}/dist/apps/users-service/package.json",
-        "{workspaceRoot}/dist/apps/users-service/bun.lock"
+        "{workspaceRoot}/dist/users-service/package.json",
+        "{workspaceRoot}/dist/users-service/bun.lock"
       ],
       "options": {
         "buildTarget": "build"
@@ -33,7 +33,7 @@
     "copy-workspace-modules": {
       "dependsOn": ["build"],
       "cache": true,
-      "outputs": ["{workspaceRoot}/dist/apps/users-service/workspace_modules"],
+      "outputs": ["{workspaceRoot}/dist/users-service/workspace_modules"],
       "executor": "@nx/js:copy-workspace-modules",
       "options": {
         "buildTarget": "build"
@@ -59,6 +59,11 @@
         "production": {
           "buildTarget": "users-service:build:production"
         }
+      }
+    },
+    "test": {
+      "options": {
+        "passWithNoTests": true
       }
     }
   }

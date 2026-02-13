@@ -1,10 +1,10 @@
 module.exports = {
-  displayName: 'customers-service',
-  preset: '../../jest.preset.js',
+  displayName: 'users-service',
+  preset: '../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/customers-service',
+  coverageDirectory: '../coverage/users-service',
 };
