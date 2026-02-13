@@ -41,7 +41,10 @@
       "exclude": [
         "apps/raketacm-e2e/**/*",
         "apps/customers-service-e2e/**/*",
-        "apps/users-service-e2e/**/*"
+        "apps/users-service-e2e/**/*",
+        "apps/api-gateway-e2e/**/*",
+        "apps/users-service-e2e/**/*",
+        "users-service-e2e/**/*"
       ]
     }
   ]
