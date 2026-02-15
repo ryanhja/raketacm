@@ -1,14 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller } from '@nestjs/common';
 import { UsersService } from './users.service';
+import { MessagePattern } from '@nestjs/microservices';
 
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-  @Get('user')
-  async getAllUser(): Promise<string> {
-    let data = await this.usersService.getUsers();
-
-    return data;
+  @MessagePattern('get_users')
+  getUser(users: any) {
+    return { message: 'Users liste from users service', users };
   }
 }
