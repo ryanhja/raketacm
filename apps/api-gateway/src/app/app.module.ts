@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { UsersGatwayController } from './users-gatway/users-gatway.controller';
 
@@ -16,7 +14,7 @@ import { UsersGatwayController } from './users-gatway/users-gatway.controller';
       },
     ]),
   ],
-  controllers: [AppController, UsersGatwayController],
-  providers: [AppService],
+  controllers: [UsersGatwayController],
+  providers: [],
 })
 export class AppModule {}

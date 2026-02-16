@@ -8,6 +8,8 @@ export class UsersController {
 
   @MessagePattern('get_users')
   getUser(users: any) {
+    console.log(users);
+    
     return { message: 'Users liste from users service', users };
   }
 }

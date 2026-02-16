@@ -8,7 +8,7 @@ export class UsersGatwayController {
     private usersServiceClient: ClientProxy,
   ) {}
 
-  @Post('users')
+  @Post()
   getUsers(@Body() users: any) {
     return this.usersServiceClient.send('get_users', users);
   }
